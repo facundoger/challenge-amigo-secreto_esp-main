@@ -19,12 +19,12 @@ function agregarAmigo(){ // Agrega un amigo nuevo a la lista "amigos" siempre qu
         limpiarCaja();
     }
 }
-function actualizarLista(lista){ //Muestra la lista de nombres de amigos en pantalla en formato de items
-    asignarTextoElemento('#listaAmigos', lista);
-    lista.innerHTML="";
-    for (let i = 0; i < lista.length; i++) {
+function actualizarLista(amigos){ //Muestra la lista de nombres de amigos en pantalla en formato de items
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = "";
+    for (let i = 0; i < amigos.length; i++) {
         let amigo = document.createElement('li'); // Crear un nuevo <li>
-        amigo.textContent = lista[i]; // Asignar el nombre del amigo
+        amigo.textContent = amigos[i]; // Asignar el nombre del amigo
         lista.appendChild(amigo); // Agregar el elemento <li> a la lista
     }
 }
